@@ -79,4 +79,6 @@ Myapp::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.action_mailer.default_url_options = { :host => 'http://secret-peak-7056.herokuapp.com/' }
+
+  config.secret_key = 'a75fc486c70bf803f338e8b1130e0e43b199995c298ce8ef5c23ab8245f6b03917c4989141b6b4573fa78567a7f2fd158d28648fba5fb328eec239ce183dd688'
 end
