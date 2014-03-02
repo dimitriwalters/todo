@@ -1,0 +1,18 @@
+// Place all the styles related to the Todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+	width: 600px;
+}
+#todo_todo_item {
+	margin-bottom: 0;
+}
+.well form {
+	margin-bottom: 0;
+}
+.well input[type=submit] {
+	margin-top: 10px;
+}
+.well li {
+	margin-bottom: 5px;
+}

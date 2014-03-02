@@ -1,0 +1,36 @@
+<title>Shared Todo App </title>
+<div class="container">
+  <h1>Shared Todo App</h1>
+  <hr>
+  <p>All your todos here</p>
+   <%= form_for @new_todo, :url => { :action => "add" }  do |f|  %>
+      <%= f.text_field  :todo_item %>
+      <%= f.submit "Add todo", class: "btn btn-primary" %>
+   <%end%>
+  <% if !flash[:error].nil? %>
+   <div class="alert alert-error">
+      <button type="button" class="close" data-dismiss="alert" >×</button>
+      <strong><%= flash[:error] %></strong>
+    </div>
+  <% end %>
+  <% if flash[:success] %>
+   <div class="alert alert-success">
+     <strong><%= flash[:success] %></strong>
+   </div>
+  <% end %>
+  <div class="well">
+    <%= form_tag("/todos/complete/", :method => "post") do %>
+      <ul style="list-style-type:none;">
+        <% @todo_items.each do |t| %> 
+          <% if t.completed == true %>
+            <li style="color:grey;"> <%= check_box_tag  "todos_checkbox[]",t.id %>  <strike><%= t.todo_item %></strike> </li>
+          <% else %>
+            <li> <%= check_box_tag  "todos_checkbox[]",t.id %> <%= t.todo_item %>  </li>
+          <% end %>
+        <%end%>
+      </ul>
+      <%= submit_tag("Complete Todos", :class=>"btn btn-success") %>
+    <%end %>
+  </div> <!-- well -->
+  <%= link_to "Delete last todo", delete_path %>
+</div> <!-- container -->
