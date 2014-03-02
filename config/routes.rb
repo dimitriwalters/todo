@@ -1,7 +1,6 @@
 Myapp::Application.routes.draw do
-  root 'welcome#index'
-
-  get "todos/index"
+  devise_for :users
+  root 'todos#index'
 
   match "todos/delete" => "todos#delete", :via => [:get], :as => :delete
   

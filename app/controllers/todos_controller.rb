@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
   def index
-  	@todo_items = Todo.all
+  	@todo_items = Todo.find_all_by_email(current_user.email)
   	@new_todo = Todo.new
   end
 
@@ -14,7 +14,7 @@ class TodosController < ApplicationController
   end
 
   def add
-    todo = Todo.create(:todo_item => params[:todo][:todo_item])
+    todo = Todo.create(:todo_item => params[:todo][:todo_item], :email => current_user.email)
     if !todo.valid?
       flash[:error] = todo.errors.full_messages.join("<br>").html_safe
     else
