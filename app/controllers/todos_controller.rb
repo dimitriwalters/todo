@@ -1,7 +1,13 @@
 class TodosController < ApplicationController
+  # before_action :authenticate_user!
+
   def index
-  	@todo_items = Todo.find_all_by_email(current_user.email)
-  	@new_todo = Todo.new
+    if user_signed_in?
+  	  @todo_items = Todo.find_all_by_email(current_user.email)
+  	  @new_todo = Todo.new
+    else
+      render "welcome/index"
+    end
   end
 
   def delete

@@ -2,6 +2,10 @@ Myapp::Application.routes.draw do
   devise_for :users
   root 'todos#index'
 
+  get "welcome/index"
+
+  match "todos/index" => "todos#index", :via => [:get]
+
   match "todos/delete" => "todos#delete", :via => [:get], :as => :delete
   
   match "todos/add" => "todos#add", :via => :post
