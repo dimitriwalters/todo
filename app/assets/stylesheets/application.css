@@ -14,3 +14,6 @@
 form label {
 	display: inline-block;
 }
+#user_remember_me {
+	margin-top: -.075em;
+}
