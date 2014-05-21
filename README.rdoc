@@ -3,3 +3,7 @@
 A todo list app developed using Ruby on Rails.
 
 Create an account and then enjoy having your life finally organized!
+
+You can view the app here:
+
+http://todoapp.dimi.io/
