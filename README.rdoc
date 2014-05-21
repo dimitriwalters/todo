@@ -6,4 +6,4 @@ Create an account and then enjoy having your life finally organized!
 
 You can view the app here:
 
-{http://todoapp.dimi.io}[http://todoapp.dimi.io]
+http://todoapp.dimi.io
