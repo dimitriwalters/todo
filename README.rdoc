@@ -1,9 +1,5 @@
 == Todo App
 
-A todo list app developed using Ruby on Rails.
-
-Create an account and then enjoy having your life finally organized!
-
-You can view the app here:
+Todo App is todo list app to manage all your tasks. You can view the app here:
 
 http://todoapp.dimi.io
