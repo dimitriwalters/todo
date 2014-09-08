@@ -1,3 +1,3 @@
-== Todo App
+== Todo
 
-Todo App is todo list app to manage your tasks. It is developed using Ruby on Rails and Bootstrap.
+A todo list app to keep track of a todo list. It is developed using Ruby on Rails and Bootstrap.
